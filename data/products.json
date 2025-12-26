@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Whey Protein 2kg",
+    "category": "Protein",
+    "price": 2499,
+    "mrp": 2999,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/Mx6LwRym/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Multivitamin Complex",
+    "category": "Multivitamin",
+    "price": 2649,
+    "mrp": 6600,
+    "offer": false,
+    "mostSelling": false,
+    "image": "https://i.ibb.co/nMQKXMGq/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Fish Oil Supplement",
+    "category": "Fish Oil",
+    "price": 2999,
+    "mrp": 7500,
+    "offer": true,
+    "mostSelling": false,
+    "image": "https://i.ibb.co/Lhspj6k5/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mass Gainer 5kg",
+    "category": "Mass Gainer",
+    "price": 3999,
+    "mrp": 7300,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/SDtSDXgk/4.jpg" 
+  },
+  {
+    "id": 5,
+    "name": "Weight Gainer",
+    "category": "Weight Gainer",
+    "price": 4199,
+    "mrp": 7800,
+    "offer": true,
+    "mostSelling": false,
+    "image": "https://i.ibb.co/qLgH7L48/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Pre-Workout Booster",
+    "category": "Pre-Workout",
+    "price": 1799,
+    "mrp": 4000,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/sd85WFLk/6.jpg" 
+  },
+  {
+    "id": 7,
+    "name": "Fat Burner Capsules",
+    "category": "Fat Burner",
+    "price": 1999,
+    "mrp": 3900,
+    "offer": true,
+    "mostSelling": false,
+    "image": "https://i.ibb.co/kskdwZRn/7.jpg" 
+  },
+  {
+    "id": 8,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 3499,
+    "mrp": 6300,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/W4fJ5Dps/8.jpg" 
+  },
+  {
+    "id": 9,
+    "name": "Oats Protein Mix",
+    "category": "Oats",
+    "price": 3999,
+    "mrp": 7100,
+    "offer": true,
+    "mostSelling": false,
+    "image": "https://i.ibb.co/Dd1pmjG/9.jpg" 
+  },
+  {
+    "id": 10,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 2599,
+    "mrp": 4200,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/DfS0gggC/10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/21ZDgkVY/11.jpg" 
+  },
+  {
+    "id": 12,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/qMLshtxk/12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/jvrKVdFh/13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/VkSBySj/14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/k2VD9qxX/15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image":  "https://i.ibb.co/DDb75CWY/16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image":  "https://i.ibb.co/MxdhnPzZ/17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/M55VtGg0/18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/qL8pR67J/19.jpg" 
+  },
+  {
+    "id": 20,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image":  "https://i.ibb.co/3m4dyxHW/20.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/VWpx2mk5/21.jpg" 
+  },
+  {
+    "id": 22,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/B2JTYQMn/22.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/n8jhShM7/23.jpg" 
+  },
+  {
+    "id": 24,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/9HDFwC0j/24.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/yBdrnzPX/25.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/FqXZkRDQ/26.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/tpFRqkC3/27.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/4RCkbTVH/28.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/W4fJ5Dps/8.jpg" 
+  },
+  {
+    "id": 30,
+    "name": "Creatine Monohydrate",
+    "category": "Creatine",
+    "price": 1799,
+    "mrp": 2499,
+    "offer": true,
+    "mostSelling": true,
+    "image": "https://i.ibb.co/W4fJ5Dps/8.jpg" 
+  }
+]
