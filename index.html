@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="RIDHI Nutrition Store Khurja - Premium quality nutrition supplements for bodybuilders and athletes. Shop authentic protein, mass gainers, BCAAs, pre-workouts and more.">
     <meta name="keywords" content="nutrition, supplements, protein, bodybuilding, fitness, health, RIDHI Nutrition Store, Khurja">
     <meta name="author" content="RIDHI Nutrition Store Khurja">
@@ -49,6 +49,49 @@
         /* Critical CSS for above-the-fold content */
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
         
+        /* Sticky category bar */
+        .category-bar {
+            position: sticky;
+            top: 0;
+            background: #0a0a0a;
+            z-index: 40;
+            padding: 0.75rem 0;
+            margin-top: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            white-space: nowrap;
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        .category-bar::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .category-item {
+            display: inline-block;
+            min-width: auto;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 2rem;
+            color: #f5f5f5;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .category-item:hover, .category-item.active {
+            background: linear-gradient(45deg, #E63946, #d62828);
+            border-color: #FFD700;
+            color: white;
+            transform: scale(1.05);
+        }
+        
         /* Touch device enhancements */
         @media (hover: none) and (pointer: coarse) {
             /* Increase touch targets on touch devices */
@@ -56,25 +99,38 @@
             .btn-secondary,
             .category-filter,
             .quantity-btn,
-            .remove-item {
-                min-height: 44px;
-                min-width: 44px;
-                padding: 12px 16px;
+            .remove-item,
+            .product-card {
+                min-height: 48px;
+                min-width: 48px;
+                padding: 14px 18px;
             }
             
             /* Add extra padding to interactive elements */
             .product-card {
-                margin-bottom: 10px;
+                margin-bottom: 15px;
+                min-height: auto;
             }
             
             /* Make sure buttons are easily tappable */
             .cart-count {
-                min-width: 24px;
-                min-height: 24px;
+                min-width: 28px;
+                min-height: 28px;
+            }
+            
+            /* Optimize product images for mobile */
+            .product-image-container {
+                height: 220px;
             }
         }
         
         /* Base styles */
+        html {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            height: 100%;
+        }
+        
         body {
             background-color: #0a0a0a;
             font-family: 'Roboto', sans-serif;
@@ -82,6 +138,9 @@
             overflow-x: hidden;
             margin: 0;
             padding: 0;
+            -webkit-overflow-scrolling: touch;
+            height: 100%;
+            touch-action: manipulation;
         }
         
         /* Hero section */
@@ -109,24 +168,26 @@
         
         /* Product cards */
         .product-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 215, 0, 0.2);
             background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
             border-radius: 16px;
             overflow: hidden;
             scroll-margin: 20px;
+            will-change: transform;
         }
         
         .product-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(230, 57, 70, 0.5);
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
             border: 1px solid #FFD700;
             z-index: 10;
         }
         
         .product-card:hover img {
-            transform: scale(1.05);
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
         }
         
         /* Buttons */
@@ -445,7 +506,7 @@
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .hero-bg {
-                height: 70vh;
+                height: 60vh;
             }
             
             .hero-content {
@@ -458,39 +519,47 @@
             }
             
             h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             /* Stack category filters on mobile */
             .category-filter {
-                padding: 0.4rem 0.8rem;
+                padding: 0.6rem 1rem;
                 font-size: 0.8rem;
-                margin: 0.2rem;
+                margin: 0.3rem;
             }
             
             /* Adjust product grid for mobile */
-            #product-grid {
+            #product-grid,
+            #all-products-grid,
+            #protein-grid,
+            #vitamins-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+                padding: 0.5rem;
             }
             
             /* Adjust product card padding */
+            .product-card {
+                margin-bottom: 1rem;
+            }
+            
             .product-card .p-6 {
-                padding: 1rem;
+                padding: 0.75rem;
             }
             
             /* Adjust cart modal for mobile */
             .modal-content {
-                margin: 1rem;
-                max-height: 95vh;
+                margin: 0.5rem;
+                max-height: 90vh;
             }
             
             #cart-items {
-                max-height: 65vh;
+                max-height: 50vh;
             }
             
             /* Adjust product detail modal for mobile */
@@ -503,19 +572,24 @@
             }
             
             /* Adjust footer columns for mobile */
-            #contact .grid-cols-1 md:grid-cols-3 {
+            #contact .grid {
                 grid-template-columns: 1fr;
             }
             
             /* Adjust button sizes for mobile */
             .btn-primary, .btn-secondary {
-                padding: 0.75rem 1rem;
+                padding: 0.8rem 1.2rem;
                 font-size: 0.9rem;
             }
             
             .shop-now-btn {
                 padding: 1rem 1.5rem;
                 font-size: 1rem;
+            }
+            
+            /* Optimize for mobile scrolling */
+            .product-image-container {
+                height: 180px;
             }
         }
         
@@ -671,7 +745,25 @@
             </div>
         </div>
     </header>
-
+    
+    <!-- Sticky Category Bar -->
+    <div class="category-bar">
+        <div class="container mx-auto px-6">
+            <div class="flex space-x-4">
+                <div class="category-item active" data-category="All">All Products</div>
+                <div class="category-item" data-category="Protein">Protein</div>
+                <div class="category-item" data-category="Multivitamin">Multivitamin</div>
+                <div class="category-item" data-category="Fish Oil">Fish Oil</div>
+                <div class="category-item" data-category="Mass Gainer">Mass Gainer</div>
+                <div class="category-item" data-category="Weight Gainer">Weight Gainer</div>
+                <div class="category-item" data-category="Pre-Workout">Pre-Workout</div>
+                <div class="category-item" data-category="Fat Burner">Fat Burner</div>
+                <div class="category-item" data-category="Creatine">Creatine</div>
+                <div class="category-item" data-category="Oats">Oats</div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Hero Section -->
     <section id="home" class="hero-bg flex items-center pt-16 relative overflow-hidden">
         <div class="absolute inset-0 opacity-20">
@@ -960,40 +1052,108 @@
         </div>
     </div>
 
-    <!-- Product Detail Modal -->
-    <div id="product-detail-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4">
-        <div class="modal-content rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col md:flex-row">
-            <div class="md:w-1/2 p-6 flex items-center justify-center bg-darkBg">
-                <div id="product-detail-image" class="w-full h-80 bg-gray-700 rounded-xl"></div>
+    <!-- Product Detail View - Full Screen -->
+    <div id="product-detail-view" class="fixed inset-0 bg-darkBg z-50 hidden w-full h-screen overflow-y-auto">
+        <div class="w-full max-w-4xl mx-auto">
+            <!-- Header with back button -->
+            <div class="sticky top-0 z-50 bg-darkBg p-4 flex items-center justify-between border-b border-gray-800">
+                <button id="back-to-products" class="text-greyText hover:text-white text-xl">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h2 id="product-detail-title" class="text-xl font-oswald font-bold text-center flex-grow px-8"></h2>
+                <button id="close-product-detail" class="text-greyText hover:text-white text-xl">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div class="md:w-1/2 p-6 flex flex-col">
-                <div class="flex justify-between items-start mb-4">
-                    <h2 id="product-detail-name" class="text-3xl font-oswald font-bold"></h2>
-                    <button id="close-product-detail" class="text-gray-400 hover:text-white text-2xl">
-                        <i class="fas fa-times"></i>
-                    </button>
+            
+            <!-- Product Images Slider -->
+            <div class="relative">
+                <div id="product-image-container" class="w-full h-80 bg-gray-800 flex items-center justify-center">
+                    <img id="product-detail-image" src="" alt="" class="w-full h-full object-cover">
                 </div>
-                <div class="mb-4">
-                    <p id="product-detail-price" class="text-4xl font-montserrat font-extrabold gold-text"></p>
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-accentGold"></div>
+                    <div class="w-3 h-3 rounded-full bg-gray-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-gray-500"></div>
                 </div>
-                <div class="mb-6 flex-1">
+            </div>
+            
+            <!-- Product Info -->
+            <div class="p-6">
+                <h2 id="product-detail-name" class="text-2xl font-oswald font-bold mb-2"></h2>
+                
+                <div id="product-detail-price" class="text-3xl font-montserrat font-extrabold gold-text mb-4"></div>
+                
+                <div class="mb-6">
                     <p id="product-detail-description" class="text-greyText font-roboto text-lg leading-relaxed"></p>
                 </div>
-                <div class="flex space-x-3 mt-auto">
-                    <button id="add-to-cart-detail" class="btn-primary py-3 px-6 rounded-xl font-montserrat font-bold flex-1 transition duration-300">
-                        <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
-                    </button>
-                    <button id="buy-now-detail" class="btn-secondary py-3 px-6 rounded-xl font-montserrat font-bold flex items-center justify-center transition duration-300">
-                        <i class="fab fa-whatsapp mr-2"></i> Buy Now
-                    </button>
+                
+                <!-- Specifications -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-oswald font-bold mb-4">Specifications</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="border border-gray-700 rounded-lg p-3">
+                            <p class="text-greyText text-sm">Category</p>
+                            <p id="product-detail-category" class="font-montserrat font-bold">-</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-3">
+                            <p class="text-greyText text-sm">Brand</p>
+                            <p class="font-montserrat font-bold">Riddhi Nutrition</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-3">
+                            <p class="text-greyText text-sm">Weight</p>
+                            <p class="font-montserrat font-bold">1kg</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-3">
+                            <p class="text-greyText text-sm">Flavor</p>
+                            <p class="font-montserrat font-bold">Mixed</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex justify-between mt-6 pt-6 border-t border-gray-700">
-                    <button id="prev-product" class="btn-secondary py-2 px-4 rounded-lg font-montserrat font-bold transition">
-                        <i class="fas fa-arrow-left mr-2"></i> Previous
-                    </button>
-                    <button id="next-product" class="btn-secondary py-2 px-4 rounded-lg font-montserrat font-bold transition">
-                        Next <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
+                
+                <!-- Reviews Section -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-oswald font-bold mb-4">Customer Reviews</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-accentGold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="ml-2 text-greyText">4.5 (128 reviews)</span>
+                    </div>
+                    <div class="border-b border-gray-700 pb-4 mb-4">
+                        <p class="font-montserrat font-bold mb-1">Great product, fast delivery!</p>
+                        <p class="text-greyText text-sm mb-2">By Verified Customer • 2 weeks ago</p>
+                        <p class="text-greyText">Excellent quality and quick delivery. Will order again.</p>
+                    </div>
+                    <div class="border-b border-gray-700 pb-4 mb-4">
+                        <p class="font-montserrat font-bold mb-1">Good value for money</p>
+                        <p class="text-greyText text-sm mb-2">By Fitness Enthusiast • 1 month ago</p>
+                        <p class="text-greyText">Good quality supplement. Noticed improvements in my workout performance.</p>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="mb-8">
+                    <div class="flex space-x-3">
+                        <button id="add-to-cart-detail" class="btn-primary py-3 px-6 rounded-xl font-montserrat font-bold flex-1 transition duration-300">
+                            <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                        </button>
+                        <button id="buy-now-detail" class="btn-secondary py-3 px-6 rounded-xl font-montserrat font-bold flex items-center justify-center transition duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Related Products -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-oswald font-bold mb-4">Related Products</h3>
+                    <div id="related-products" class="grid grid-cols-2 gap-4">
+                        <!-- Related products will be loaded here -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -1011,9 +1171,11 @@
         const cartModal = document.getElementById('cart-modal');
         const checkoutModal = document.getElementById('checkout-modal');
         const productDetailModal = document.getElementById('product-detail-modal');
+        const productDetailView = document.getElementById('product-detail-view');
         const closeCart = document.getElementById('close-cart');
         const closeCheckout = document.getElementById('close-checkout');
         const closeProductDetail = document.getElementById('close-product-detail');
+        const backToProducts = document.getElementById('back-to-products');
         const cartItems = document.getElementById('cart-items');
         const cartCount = document.getElementById('cart-count');
         const cartTotal = document.getElementById('cart-total');
@@ -1026,11 +1188,14 @@
         
         // Product detail elements
         const productDetailName = document.getElementById('product-detail-name');
+        const productDetailTitle = document.getElementById('product-detail-title');
         const productDetailPrice = document.getElementById('product-detail-price');
         const productDetailDescription = document.getElementById('product-detail-description');
+        const productDetailCategory = document.getElementById('product-detail-category');
         const productDetailImage = document.getElementById('product-detail-image');
         const addToCartDetail = document.getElementById('add-to-cart-detail');
         const buyNowDetail = document.getElementById('buy-now-detail');
+        const relatedProductsContainer = document.getElementById('related-products');
         const prevProduct = document.getElementById('prev-product');
         const nextProduct = document.getElementById('next-product');
         
@@ -1070,6 +1235,12 @@
             // Close product detail modal
             closeProductDetail.addEventListener('click', () => {
                 productDetailModal.classList.add('hidden');
+                productDetailView.classList.add('hidden');
+            });
+            
+            // Back to products from detail view
+            backToProducts.addEventListener('click', () => {
+                productDetailView.classList.add('hidden');
             });
             
             // Close cart modal when clicking outside
@@ -1204,6 +1375,7 @@
         function showProductDetail(product, index) {
             currentProductIndex = index;
             productDetailName.textContent = product.name;
+            productDetailTitle.textContent = product.name;
             
             // Format prices
             const formattedPrice = `₹${product.price.toLocaleString('en-IN')}`;
@@ -1232,16 +1404,71 @@
                 productDetailPrice.appendChild(mostSellingBadge);
             }
             
+            // Set product category
+            productDetailCategory.textContent = product.category;
+            
             // For now, we'll use a generic description since the new format doesn't include descriptions
             productDetailDescription.textContent = `High-quality ${product.name} from RIDHI Nutrition Store. Get the best nutrition for your fitness journey.`;
             
-            // Set background image for product detail
+            // Set product image
             const imageUrl = getProductImagePlaceholder(product.image);
-            productDetailImage.style.backgroundImage = `url(${imageUrl})`;
-            productDetailImage.style.backgroundSize = 'cover';
-            productDetailImage.style.backgroundPosition = 'center';
+            productDetailImage.src = imageUrl;
             
-            productDetailModal.classList.remove('hidden');
+            // Show the product detail view
+            productDetailModal.classList.add('hidden');
+            productDetailView.classList.remove('hidden');
+            
+            // Load related products
+            loadRelatedProducts(product);
+        }
+        
+        // Load related products
+        function loadRelatedProducts(currentProduct) {
+            // Clear existing related products
+            relatedProductsContainer.innerHTML = '';
+            
+            // Get related products based on category (excluding current product)
+            const relatedProducts = currentProducts.filter(product => 
+                product.category === currentProduct.category && 
+                product.id !== currentProduct.id
+            ).slice(0, 4); // Limit to 4 related products
+            
+            if (relatedProducts.length === 0) {
+                // If no products in same category, get other products
+                relatedProducts.push(...currentProducts.filter(product => 
+                    product.id !== currentProduct.id
+                ).slice(0, 4));
+            }
+            
+            // Render related products
+            relatedProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card rounded-2xl overflow-hidden transition-all duration-300 border border-gray-800 cursor-pointer';
+                
+                const imageUrl = getProductImagePlaceholder(product.image);
+                const formattedPrice = `₹${product.price.toLocaleString('en-IN')}`;
+                
+                productCard.innerHTML = `
+                    <div class="product-image-container">
+                        <img src="${imageUrl}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="text-lg font-oswald font-bold mb-1 truncate">${product.name}</h3>
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-montserrat font-bold gold-text">${formattedPrice}</p>
+                            ${product.offer ? `<span class="bg-accentRed text-white text-xs px-2 py-1 rounded">OFFER</span>` : ''}
+                        </div>
+                    </div>
+                `;
+                
+                // Add click event to show product detail
+                productCard.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showProductDetail(product, currentProducts.findIndex(p => p.id === product.id));
+                });
+                
+                relatedProductsContainer.appendChild(productCard);
+            });
         }
         
         // Add to cart function
@@ -1468,21 +1695,14 @@
                     }
                 });
                 
-                // Add hover event to ensure element stays in view when it expands
+                // Add hover event for visual feedback only
                 productCard.addEventListener('mouseenter', function() {
-                    // Use a slight delay to ensure the transform has started
-                    setTimeout(() => {
-                        // Scroll the element into view with appropriate behavior
-                        productCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-                    }, 50);
+                    // Visual feedback only, no scrolling behavior
                 });
                 
                 // Also add touch event for better mobile experience
                 productCard.addEventListener('touchstart', function(e) {
-                    // For mobile touch, ensure the element is scrolled properly
-                    setTimeout(() => {
-                        productCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-                    }, 50);
+                    // Visual feedback only, no scrolling behavior
                 });
                 
                 // Use product images
@@ -1664,6 +1884,22 @@
                     document.getElementById('all-products').scrollIntoView({ behavior: 'smooth' });
                 });
             });
+            
+            // Set up sticky category bar
+            const categoryItems = document.querySelectorAll('.category-item');
+            
+            categoryItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Remove active class from all items
+                    categoryItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    item.classList.add('active');
+                    
+                    const category = item.getAttribute('data-category'); // Get category from data-category attribute
+                    filterProductsByCategory(category);
+                });
+            });
         }
         
         // Filter products by category - now scrolls to the appropriate section
@@ -1704,21 +1940,14 @@
                     }
                 });
                 
-                // Add hover event to ensure element stays in view when it expands
+                // Add hover event for visual feedback only
                 productCard.addEventListener('mouseenter', function() {
-                    // Use a slight delay to ensure the transform has started
-                    setTimeout(() => {
-                        // Scroll the element into view with appropriate behavior
-                        productCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-                    }, 50);
+                    // Visual feedback only, no scrolling behavior
                 });
                 
                 // Also add touch event for better mobile experience
                 productCard.addEventListener('touchstart', function(e) {
-                    // For mobile touch, ensure the element is scrolled properly
-                    setTimeout(() => {
-                        productCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-                    }, 50);
+                    // Visual feedback only, no scrolling behavior
                 });
                 
                 // Use product images
