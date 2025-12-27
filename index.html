@@ -2,1478 +2,336 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="RIDHI Nutrition Store Khurja - Premium quality nutrition supplements for bodybuilders and athletes. Shop authentic protein, mass gainers, BCAAs, pre-workouts and more.">
-    <meta name="keywords" content="nutrition, supplements, protein, bodybuilding, fitness, health, RIDHI Nutrition Store, Khurja">
-    <meta name="author" content="RIDHI Nutrition Store Khurja">
-    <meta name="theme-color" content="#E63946">
-    <meta property="og:title" content="RIDHI Nutrition Store Khurja | Premium Fitness Supplements">
-    <meta property="og:description" content="Premium quality nutrition supplements for bodybuilders and athletes. Authentic products with fast delivery.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourusername.github.io/RIDHI-gym">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1534367507877-0edd93bd013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RIDHI Nutrition Store Khurja | Premium Fitness Supplements">
-    <meta name="twitter:description" content="Premium quality nutrition supplements for bodybuilders and athletes. Authentic products with fast delivery.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1534367507877-0edd93bd013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80">
-    <title>RIDHI NUTRITION STORE KHURJA | Premium Fitness Supplements</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1534367507877-0edd93bd013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=192&q=80">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        darkBg: '#0a0a0a',
-                        darkGrey: '#121212',
-                        accentRed: '#E63946',
-                        accentGold: '#FFD700',
-                        lightText: '#f5f5f5',
-                        greyText: '#cccccc'
-                    },
-                    fontFamily: {
-                        oswald: ['Oswald', 'sans-serif'],
-                        montserrat: ['Montserrat', 'sans-serif'],
-                        roboto: ['Roboto', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIDHI Nutrition Store Khurja | Premium Fitness Supplements</title>
     <style>
-        /* Critical CSS for above-the-fold content */
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
-        
-        /* Sticky category bar */
-        .category-bar {
-            position: sticky;
-            top: 0;
-            background: #0a0a0a;
-            z-index: 40;
-            padding: 0.75rem 0;
-            margin-top: 0;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            white-space: nowrap;
-            scrollbar-width: none; /* Firefox */
-        }
-        
-        .category-bar::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
-        }
-        
-        .category-item {
-            display: inline-block;
-            min-width: auto;
-            padding: 0.5rem 1rem;
-            margin: 0 0.25rem;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 2rem;
-            color: #f5f5f5;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-        
-        .category-item:hover, .category-item.active {
-            background: linear-gradient(45deg, #E63946, #d62828);
-            border-color: #FFD700;
-            color: white;
-            transform: scale(1.05);
-        }
-        
-        /* Touch device enhancements */
-        @media (hover: none) and (pointer: coarse) {
-            /* Increase touch targets on touch devices */
-            .btn-primary,
-            .btn-secondary,
-            .category-filter,
-            .quantity-btn,
-            .remove-item,
-            .product-card {
-                min-height: 48px;
-                min-width: 48px;
-                padding: 14px 18px;
-            }
-            
-            /* Add extra padding to interactive elements */
-            .product-card {
-                margin-bottom: 15px;
-                min-height: auto;
-            }
-            
-            /* Make sure buttons are easily tappable */
-            .cart-count {
-                min-width: 28px;
-                min-height: 28px;
-            }
-            
-            /* Optimize product images for mobile */
-            .product-image-container {
-                height: 220px;
-            }
-        }
-        
-        /* Base styles */
-        html {
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            height: 100%;
-        }
-        
-        body {
-            background-color: #0a0a0a;
-            font-family: 'Roboto', sans-serif;
-            color: #f5f5f5;
-            overflow-x: hidden;
+        /* --- CSS Reset & Basic Styles (No Lag) --- */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            -webkit-overflow-scrolling: touch;
-            height: 100%;
-            touch-action: manipulation;
         }
-        
-        /* Hero section */
-        .hero-bg {
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* System fonts use karega jo fast hote hain */
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background: linear-gradient(45deg, #34495e, #2c3e50);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+
+        /* --- Navigation (Category Filter) --- */
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+            text-align: center;
+            overflow-x: auto;
+            white-space: nowrap;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        nav a.active {
+            background: #FFD700;
+            color: #0a0a0a;
+        }
+
+        /* --- Main Container --- */
+        .container {
+            max-width: 1000px;
+            margin: 120px auto 20px;
+            padding: 20px;
+        }
+
+        /* --- Hero Section (Banner) --- */
+        .hero {
             background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(18, 18, 18, 0.95)), url('https://images.unsplash.com/photo-1534367507877-0edd93bd013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-        
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, transparent 50%, #0a0a0a 100%);
-            pointer-events: none;
-        }
-        
-        /* Product cards */
-        .product-card {
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
-            border-radius: 16px;
-            overflow: hidden;
-            scroll-margin: 20px;
-            will-change: transform;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
-            border: 1px solid #FFD700;
-            z-index: 10;
-        }
-        
-        .product-card:hover img {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
-        }
-        
-        /* Buttons */
-        .whatsapp-btn {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            border: none;
-            padding: 12px 24px;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
             border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
+            margin-bottom: 20px;
         }
-        
-        .whatsapp-btn:hover {
-            background: linear-gradient(45deg, #128C7E, #075E54);
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-        
-        /* Text styles */
-        .gold-text {
-            color: #FFD700;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-        }
-        
-        .red-accent {
-            color: #E63946;
-            text-shadow: 0 0 12px rgba(230, 57, 70, 0.5);
-        }
-        
-        .medal-icon {
-            color: #FFD700;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-            animation: pulse 2s infinite;
-        }
-        
-        /* Animations */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes fade-in-down {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fade-in-up {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in-down {
-            animation: fade-in-down 1s ease forwards;
-        }
-        
-        .animate-fade-in-up {
-            animation: fade-in-up 1s ease forwards;
-        }
-        
-        .delay-100 {
-            animation-delay: 0.3s;
-            opacity: 0;
-        }
-        
-        .delay-200 {
-            animation-delay: 0.6s;
-            opacity: 0;
-        }
-        
-        .delay-300 {
-            animation-delay: 0.9s;
-            opacity: 0;
-        }
-        
-        .animate-bounce {
-            animation: bounce 2s infinite;
-        }
-        
-        /* Badges */
-        .premium-badge {
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            color: #0a0a0a;
-            font-weight: bold;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+
+        .btn {
             display: inline-block;
-        }
-        
-        .authentic-badge {
-            position: relative;
-            display: inline-block;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
             padding: 10px 20px;
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid #FFD700;
-            border-radius: 30px;
-            font-weight: 600;
-            color: #FFD700;
-            margin-bottom: 2rem;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-        }
-        
-        .authentic-badge::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 35px;
-            z-index: -1;
-        }
-        
-        /* Buttons */
-        .shop-now-btn {
-            background: linear-gradient(45deg, #E63946, #d62828);
-            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.5);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
             border: none;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 600;
             cursor: pointer;
         }
-        
-        .shop-now-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.7);
+
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
         }
-        
-        .shop-now-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -60%;
-            width: 20px;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: rotate(25deg);
-            transition: all 0.6s;
+
+        /* --- Grid Layout for Products --- */
+        .grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
-        
-        .shop-now-btn:hover::after {
-            left: 120%;
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        /* Enhanced button styles */
-        .btn-primary {
-            background: linear-gradient(45deg, #E63946, #d62828);
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .mrp {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+
+        .savings {
+            color: #27ae60;
+            font-size: 0.9rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #ddd;
+            font-size: 0.8rem;
+        }
+
+        /* --- Cart Button --- */
+        #cart-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3498db;
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
-            cursor: pointer;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.5);
-        }
-        
-        .btn-secondary {
-            background: linear-gradient(45deg, #1a1a1a, #0d0d0d);
-            color: #f5f5f5;
-            border: 1px solid #333;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .btn-secondary:hover {
-            background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
-            border-color: #FFD700;
-        }
-        
-        /* Modals */
-        .modal-content {
-            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-        }
-        
-        /* Input fields */
-        .form-input {
-            background: rgba(30, 30, 30, 0.8);
-            border: 1px solid #333;
-            color: #f5f5f5;
-            transition: all 0.3s ease;
-            padding: 12px;
-            border-radius: 8px;
-        }
-        
-        .form-input:focus {
-            border-color: #E63946;
-            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.3);
-            outline: none;
-        }
-        
-        /* Utility classes */
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #E63946, transparent);
-            border-radius: 2px;
-        }
-        
-        .product-image-container {
-            overflow: hidden;
-            height: 250px;
-            position: relative;
-        }
-        
-        .product-image-container img {
-            transition: transform 0.5s ease;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Footer */
-        .footer-bg {
-            background: linear-gradient(to bottom, #121212, #0a0a0a);
-        }
-        
-        /* Scrollbar styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #121212;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(#E63946, #FFD700);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(#d62828, #FFA500);
-        }
-        
-        /* Responsive adjustments */
-        /* Tablet responsiveness */
-        @media (max-width: 1024px) {
-            .container {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            
-            .hero-bg {
-                height: 80vh;
-            }
-            
-            .hero-content {
-                padding-top: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .product-card {
-                max-width: 100%;
-            }
-            
-            /* Adjust category filters for tablets */
-            .category-filter {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
-            }
-        }
-        
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .hero-bg {
-                height: 60vh;
-            }
-            
-            .hero-content {
-                padding-top: 1rem;
-            }
-            
-            .premium-badge {
-                font-size: 0.6rem;
-                padding: 2px 8px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            /* Stack category filters on mobile */
-            .category-filter {
-                padding: 0.6rem 1rem;
-                font-size: 0.8rem;
-                margin: 0.3rem;
-            }
-            
-            /* Adjust product grid for mobile */
-            #product-grid,
-            #all-products-grid,
-            #protein-grid,
-            #vitamins-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 0.5rem;
-            }
-            
-            /* Adjust product card padding */
-            .product-card {
-                margin-bottom: 1rem;
-            }
-            
-            .product-card .p-6 {
-                padding: 0.75rem;
-            }
-            
-            /* Adjust cart modal for mobile */
-            .modal-content {
-                margin: 0.5rem;
-                max-height: 90vh;
-            }
-            
-            #cart-items {
-                max-height: 50vh;
-            }
-            
-            /* Adjust product detail modal for mobile */
-            #product-detail-modal .modal-content {
-                flex-direction: column;
-            }
-            
-            #product-detail-modal .modal-content > div {
-                width: 100%;
-            }
-            
-            /* Adjust footer columns for mobile */
-            #contact .grid {
-                grid-template-columns: 1fr;
-            }
-            
-            /* Adjust button sizes for mobile */
-            .btn-primary, .btn-secondary {
-                padding: 0.8rem 1.2rem;
-                font-size: 0.9rem;
-            }
-            
-            .shop-now-btn {
-                padding: 1rem 1.5rem;
-                font-size: 1rem;
-            }
-            
-            /* Optimize for mobile scrolling */
-            .product-image-container {
-                height: 180px;
-            }
-        }
-        
-        /* Small mobile devices */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-content p {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.75rem;
-            }
-            
-            /* Single column category filters on small screens */
-            .category-filter {
-                width: 100%;
-                margin-bottom: 0.5rem;
-            }
-            
-            /* Adjust product image container */
-            .product-image-container {
-                height: 200px;
-            }
-            
-            /* Adjust product card text */
-            .product-card h3 {
-                font-size: 1.5rem;
-            }
-            
-            .product-card p {
-                font-size: 1.75rem;
-            }
-            
-            /* Adjust header for mobile */
-            header .container {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            
-            .cart-count {
-                width: 1.25rem;
-                height: 1.25rem;
-                font-size: 0.6rem;
-            }
-        }
-        
-        /* Large desktop screens */
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1200px;
-            }
-            
-            .hero-content {
-                max-width: 80%;
-                margin: 0 auto;
-            }
-            
-            /* Wider product grid on large screens */
-            #product-grid {
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            }
-        }
-        
-        /* Loading states */
-        .loading-spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            border-top: 4px solid #E63946;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        /* --- Mobile Specific Tweaks --- */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+            .hero {
+                padding: 20px 10px;
+            }
+            nav {
+                top: 60px;
+            }
+            .container {
+                margin-top: 130px;
+            }
         }
     </style>
 </head>
-<body class="bg-darkBg text-lightText">
-    <!-- Header -->
-    <header class="fixed w-full z-50 bg-darkBg bg-opacity-95 backdrop-blur-sm py-4 px-6 border-b border-gray-800">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <h1 class="text-2xl md:text-3xl font-oswald font-bold red-accent tracking-wide">RIDHI NUTRITION STORE</h1>
-                <span class="ml-2 text-xs bg-accentGold text-darkBg px-2 py-1 rounded font-bold">KHURJA</span>
-            </div>
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden text-lightText">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="font-montserrat hover:gold-text transition duration-300 font-medium">Home</a>
-                <a href="#protein" class="font-montserrat hover:gold-text transition duration-300 font-medium">Protein</a>
-                <a href="#vitamins" class="font-montserrat hover:gold-text transition duration-300 font-medium">Vitamins</a>
-                <a href="#about" class="font-montserrat hover:gold-text transition duration-300 font-medium">About</a>
-                <a href="#contact" class="font-montserrat hover:gold-text transition duration-300 font-medium">Contact</a>
-            </nav>
-            <!-- Category Dropdown -->
-            <div class="relative hidden md:block mr-6">
-                <button id="category-dropdown-btn" class="text-lightText hover:text-accentGold transition duration-300 flex items-center">
-                    <i class="fas fa-list mr-1"></i> Categories
-                    <i class="fas fa-chevron-down ml-1 text-xs"></i>
-                </button>
-                <div id="category-dropdown" class="absolute right-0 mt-2 w-48 bg-darkBg border border-gray-700 rounded-lg shadow-lg hidden z-50">
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="All">All Products</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Protein">Protein</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Multivitamin">Multivitamin</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Fish Oil">Fish Oil</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Mass Gainer">Mass Gainer</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Weight Gainer">Weight Gainer</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Pre-Workout">Pre-Workout</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Fat Burner">Fat Burner</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Creatine">Creatine</a>
-                    <a href="#all-products" class="category-link block px-4 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition" data-category="Oats">Oats</a>
-                </div>
-            </div>
-            <!-- Cart Icon -->
-            <div class="relative cursor-pointer" id="cart-icon">
-                <i class="fas fa-shopping-cart text-2xl text-gray-300 hover:text-accentGold transition duration-300"></i>
-                <span id="cart-count" class="absolute -top-2 -right-2 bg-accentRed text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-darkBg border-t border-gray-800 mt-4 py-4 px-6 absolute left-0 right-0 top-full z-50">
-            <div class="flex flex-col space-y-4">
-                <a href="#home" class="font-montserrat hover:gold-text transition duration-300 font-medium py-2">Home</a>
-                <a href="#protein" class="font-montserrat hover:gold-text transition duration-300 font-medium py-2">Protein</a>
-                <a href="#vitamins" class="font-montserrat hover:gold-text transition duration-300 font-medium py-2">Vitamins</a>
-                <a href="#about" class="font-montserrat hover:gold-text transition duration-300 font-medium py-2">About</a>
-                <a href="#contact" class="font-montserrat hover:gold-text transition duration-300 font-medium py-2">Contact</a>
-                <!-- Mobile Category Links -->
-                <div class="pt-4 border-t border-gray-800">
-                    <h3 class="font-montserrat font-bold text-greyText mb-3">Categories</h3>
-                    <div class="grid grid-cols-2 gap-2">
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="All">All Products</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Protein">Protein</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Multivitamin">Multivitamin</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Fish Oil">Fish Oil</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Mass Gainer">Mass Gainer</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Weight Gainer">Weight Gainer</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Pre-Workout">Pre-Workout</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Fat Burner">Fat Burner</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Creatine">Creatine</a>
-                        <a href="#all-products" class="mobile-category-link block px-3 py-2 text-greyText hover:bg-darkGrey hover:text-accentGold transition text-sm" data-category="Oats">Oats</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>
+    <header>
     </header>
-    
-    <!-- Sticky Category Bar -->
-    <div class="category-bar">
-        <div class="container mx-auto px-6">
-            <div class="flex space-x-4">
-                <div class="category-item active" data-category="All">All Products</div>
-                <div class="category-item" data-category="Protein">Protein</div>
-                <div class="category-item" data-category="Multivitamin">Multivitamin</div>
-                <div class="category-item" data-category="Fish Oil">Fish Oil</div>
-                <div class="category-item" data-category="Mass Gainer">Mass Gainer</div>
-                <div class="category-item" data-category="Weight Gainer">Weight Gainer</div>
-                <div class="category-item" data-category="Pre-Workout">Pre-Workout</div>
-                <div class="category-item" data-category="Fat Burner">Fat Burner</div>
-                <div class="category-item" data-category="Creatine">Creatine</div>
-                <div class="category-item" data-category="Oats">Oats</div>
-            </div>
+
+    <nav id="category-nav">
+        <a href="#" class="category-link active" data-category="All">All Products</a>
+        <a href="#" class="category-link" data-category="Protein">Protein</a>
+        <a href="#" class="category-link" data-category="Multivitamin">Multivitamin</a>
+        <a href="#" class="category-link" data-category="Fish Oil">Fish Oil</a>
+        <a href="#" class="category-link" data-category="Mass Gainer">Mass Gainer</a>
+        <a href="#" class="category-link" data-category="Weight Gainer">Weight Gainer</a>
+        <a href="#" class="category-link" data-category="Pre-Workout">Pre-Workout</a>
+        <a href="#" class="category-link" data-category="Fat Burner">Fat Burner</a>
+        <a href="#" class="category-link" data-category="Creatine">Creatine</a>
+        <a href="#" class="category-link" data-category="Oats">Oats</a>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h2>FUEL YOUR STRENGTH</h2>
+            <p>Premium Quality Nutrition Supplements for Bodybuilders and Athletes</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </section>
+
+        <div id="product-grid" class="grid">
+            <!-- Products will be loaded here -->
         </div>
     </div>
-    
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg flex items-center pt-16 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-accentRed rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
-            <div class="absolute bottom-1/3 right-1/4 w-48 h-48 bg-accentGold rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
-        </div>
-        <div class="container mx-auto px-6 text-center hero-content relative z-10">
-            <div class="mb-6 animate-fade-in-down">
-                <span class="premium-badge animate-pulse">PREMIUM QUALITY</span>
-            </div>
-            <h1 class="text-4xl md:text-7xl font-oswald font-extrabold mb-6 tracking-wide animate-fade-in-up">
-                FUEL YOUR <span class="red-accent">STRENGTH</span>
-            </h1>
-            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto grey-text font-roboto leading-relaxed animate-fade-in-up delay-100">
-                Premium Quality Nutrition Supplements for Bodybuilders and Athletes
-            </p>
-            <div class="animate-fade-in-up delay-200">
-                <a href="#protein" class="inline-block shop-now-btn text-white font-montserrat font-bold py-4 px-12 rounded-full text-xl transition duration-300 transform hover:scale-105">
-                    <i class="fas fa-shopping-cart mr-3"></i>SHOP NOW
-                </a>
-                <div class="mt-8 flex justify-center space-x-6">
-                    <div class="flex items-center text-greyText">
-                        <i class="fas fa-shipping-fast text-accentGold text-2xl mr-2"></i>
-                        <span>Free Shipping</span>
-                    </div>
-                    <div class="flex items-center text-greyText">
-                        <i class="fas fa-shield-alt text-accentGold text-2xl mr-2"></i>
-                        <span>100% Authentic</span>
-                    </div>
-                    <div class="flex items-center text-greyText">
-                        <i class="fas fa-medal text-accentGold text-2xl mr-2"></i>
-                        <span>Award Winning</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- All Products Section - shown first on home page -->
-    <section id="all-products" class="py-24 bg-darkBg relative">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accentGold to-transparent"></div>
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl md:text-5xl font-oswald font-bold text-center mb-4">ALL PRODUCTS</h2>
-                <p class="text-greyText text-center mb-6 max-w-2xl mx-auto font-roboto text-lg">Browse our complete range of nutrition supplements</p>
-                <div class="w-24 h-1 bg-accentRed mx-auto rounded-full"></div>
-            </div>
-            
-            <div id="all-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- All products will be dynamically inserted here -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- Products Section -->
-    <!-- Protein Section -->
-    <section id="protein" class="py-24 bg-darkGrey relative">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accentRed to-transparent"></div>
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl md:text-5xl font-oswald font-bold text-center mb-4">PROTEIN SUPPLEMENTS</h2>
-                <p class="text-greyText text-center mb-6 max-w-2xl mx-auto font-roboto text-lg">Premium protein supplements for muscle growth and recovery</p>
-                <div class="w-24 h-1 bg-accentGold mx-auto rounded-full"></div>
-            </div>
-            
-            <div id="protein-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Protein products will be dynamically inserted here -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- Vitamins Section -->
-    <section id="vitamins" class="py-24 bg-darkGrey relative">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accentRed to-transparent"></div>
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="section-title text-4xl md:text-5xl font-oswald font-bold text-center mb-4">VITAMIN SUPPLEMENTS</h2>
-                <p class="text-greyText text-center mb-6 max-w-2xl mx-auto font-roboto text-lg">Essential vitamins for overall health and wellness</p>
-                <div class="w-24 h-1 bg-accentGold mx-auto rounded-full"></div>
-            </div>
-            
-            <div id="vitamins-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Vitamin products will be dynamically inserted here -->
-            </div>
-        </div>
-    </section>
+    <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-darkBg relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accentGold to-transparent"></div>
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <div class="authentic-badge mb-6">100% AUTHENTIC PRODUCTS</div>
-                <h2 class="section-title text-4xl md:text-5xl font-oswald font-bold mb-6">AWARD-WINNING QUALITY</h2>
-                <p class="text-greyText max-w-2xl mx-auto font-roboto text-lg">Trusted by champions and backed by years of excellence</p>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-                <div class="md:w-2/5 mb-12 md:mb-0 animate-fade-in-up delay-100">
-                    <div class="relative">
-                        <div class="w-72 h-72 mx-auto bg-gradient-to-br from-accentRed to-red-800 rounded-full flex items-center justify-center shadow-2xl animate-pulse">
-                            <div class="w-64 h-64 bg-darkBg rounded-full flex items-center justify-center shadow-inner">
-                                <span class="text-5xl font-oswald font-extrabold gold-text">100%</span>
-                            </div>
-                        </div>
-                        <div class="absolute -top-4 -right-4 medal-icon animate-bounce">
-                            <i class="fas fa-trophy text-4xl"></i>
-                        </div>
-                        <div class="absolute -bottom-4 -left-4 medal-icon animate-bounce delay-300">
-                            <i class="fas fa-award text-4xl"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="md:w-1/2 animate-fade-in-up delay-200">
-                    <h3 class="text-3xl font-oswald font-bold mb-6 gold-text">TRUSTED BY CHAMPIONS</h3>
-                    <p class="text-greyText mb-6 font-roboto leading-relaxed text-lg">
-                        At RIDHI Nutrition Store, we guarantee the authenticity of all our products. Our supplements are sourced directly from certified manufacturers and undergo strict quality checks.
-                    </p>
-                    <p class="text-greyText mb-8 font-roboto leading-relaxed text-lg">
-                        Backed by years of experience and recognized with prestigious awards, we are committed to providing the best nutrition solutions for your fitness journey.
-                    </p>
-                    <div class="flex items-start mb-6">
-                        <div class="mr-4 text-3xl medal-icon mt-1">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-oswald text-xl font-bold gold-text mb-2">Quality Assured</h4>
-                            <p class="text-greyText">Certified and tested products with guaranteed authenticity</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start mb-6">
-                        <div class="mr-4 text-3xl medal-icon mt-1">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-oswald text-xl font-bold gold-text mb-2">Secure Shopping</h4>
-                            <p class="text-greyText">Safe and reliable transactions with secure payment options</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="mr-4 text-3xl medal-icon mt-1">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-oswald text-xl font-bold gold-text mb-2">Fast Delivery</h4>
-                            <p class="text-greyText">Quick and reliable shipping to your doorstep</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer-bg py-16 border-t border-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div>
-                    <h3 class="text-2xl font-oswald font-bold mb-6 red-accent">RIDHI NUTRITION STORE</h3>
-                    <p class="text-greyText mb-6 font-roboto leading-relaxed">
-                        Premium nutrition supplements for serious athletes and bodybuilders in Khurja and beyond.
-                    </p>
-                    <div class="flex items-start mb-4">
-                        <i class="fas fa-map-marker-alt mr-4 mt-1 gold-text text-xl"></i>
-                        <span class="text-greyText">Khurja, Bulandshahr<br>Uttar Pradesh, India</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-phone-alt mr-4 gold-text text-xl"></i>
-                        <span class="text-greyText font-medium">+91-9557412283</span>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-2xl font-oswald font-bold mb-6">QUICK LINKS</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-greyText hover:gold-text transition duration-300 font-roboto">Home</a></li>
-                        <li><a href="#protein" class="text-greyText hover:gold-text transition duration-300 font-roboto">Protein</a></li>
-                        <li><a href="#vitamins" class="text-greyText hover:gold-text transition duration-300 font-roboto">Vitamins</a></li>
-                        <li><a href="#about" class="text-greyText hover:gold-text transition duration-300 font-roboto">About Us</a></li>
-                        <li><a href="#" class="text-greyText hover:gold-text transition duration-300 font-roboto">Shipping Policy</a></li>
-                        <li><a href="#" class="text-greyText hover:gold-text transition duration-300 font-roboto">Return Policy</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-2xl font-oswald font-bold mb-6">CONNECT WITH US</h4>
-                    <p class="text-greyText mb-6 font-roboto">Follow us on social media for updates and exclusive offers</p>
-                    <div class="flex space-x-5 mb-8">
-                        <a href="https://www.facebook.com/share/1H6EmEb2LK/" class="text-greyText hover:gold-text text-3xl transition duration-300" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-greyText hover:gold-text text-3xl transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        
-                    </div>
-                    <a href="https://wa.me/919557412283" class="inline-block whatsapp-btn text-white py-3 px-6 rounded-lg font-montserrat font-bold">
-                        <i class="fab fa-whatsapp mr-2"></i>Message on WhatsApp
-                    </a>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-14 pt-8 text-center">
-                <p class="text-greyText">&copy; RIDHI Nutrition Store Khurja. All rights reserved.</p>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; RIDHI Nutrition Store Khurja. All rights reserved.</p>
+        <p>+91-9557412283</p>
     </footer>
 
-    <!-- Shopping Cart Modal -->
-    <div id="cart-modal" class="fixed top-0 right-0 h-full w-full max-w-md bg-darkBg z-50 hidden transform translate-x-full transition-transform duration-300 ease-in-out">
-        <div class="h-full flex flex-col">
-            <div class="p-6 border-b border-gray-700 flex justify-between items-center">
-                <h2 class="text-2xl font-oswald font-bold">Your Shopping Cart</h2>
-                <button id="close-cart" class="text-gray-400 hover:text-white text-2xl">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div id="cart-items" class="flex-1 overflow-y-auto p-6">
-                <!-- Cart items will be dynamically inserted here -->
-                <div class="text-center py-10 text-gray-500" id="empty-cart-message">
-                    <i class="fas fa-shopping-cart text-4xl mb-4"></i>
-                    <p>Your cart is empty</p>
-                </div>
-            </div>
-            <div class="p-6 border-t border-gray-700">
-                <div class="mb-4">
-                    <div class="flex justify-between text-lg font-montserrat font-bold">
-                        <span>MRP Total:</span>
-                        <span id="cart-mrp-total">₹0</span>
-                    </div>
-                    <div class="flex justify-between text-lg font-montserrat font-bold text-green-500">
-                        <span>You Save:</span>
-                        <span id="cart-savings">₹0</span>
-                    </div>
-                    <div class="flex justify-between text-xl font-montserrat font-bold mt-2 pt-2 border-t border-gray-700">
-                        <span>Final Payable:</span>
-                        <span id="cart-total">₹0</span>
-                    </div>
-                </div>
-                <button id="checkout-btn" class="whatsapp-btn w-full py-4 rounded-xl font-montserrat font-bold text-lg">
-                    <i class="fab fa-whatsapp mr-2"></i>Proceed to Checkout via WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Checkout Form Modal -->
-    <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4">
-        <div class="modal-content rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
-            <div class="p-6 border-b border-gray-700 flex justify-between items-center">
-                <h2 class="text-2xl font-oswald font-bold">Checkout Details</h2>
-                <button id="close-checkout" class="text-gray-400 hover:text-white text-2xl">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="p-6 flex-1 overflow-y-auto max-h-[50vh]">
-                <form id="checkout-form">
-                    <div class="mb-6">
-                        <label class="block text-greyText font-montserrat font-bold mb-2" for="customer-name">Full Name</label>
-                        <input type="text" id="customer-name" class="form-input w-full bg-darkBg border border-gray-700 rounded-xl py-3 px-4 text-white font-roboto focus:outline-none focus:border-accentGold" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-greyText font-montserrat font-bold mb-2" for="customer-mobile">Mobile Number</label>
-                        <input type="tel" id="customer-mobile" class="form-input w-full bg-darkBg border border-gray-700 rounded-xl py-3 px-4 text-white font-roboto focus:outline-none focus:border-accentGold" placeholder="Enter your mobile number" required>
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-greyText font-montserrat font-bold mb-2" for="customer-address">Delivery Address</label>
-                        <textarea id="customer-address" rows="4" class="form-input w-full bg-darkBg border border-gray-700 rounded-xl py-3 px-4 text-white font-roboto focus:outline-none focus:border-accentGold" placeholder="Enter your complete address" required></textarea>
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-greyText font-montserrat font-bold mb-2" for="order-notes">Order Notes (Optional)</label>
-                        <textarea id="order-notes" rows="2" class="form-input w-full bg-darkBg border border-gray-700 rounded-xl py-3 px-4 text-white font-roboto focus:outline-none focus:border-accentGold" placeholder="Any special instructions for your order"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="p-6 border-t border-gray-700 mt-auto">
-                <div class="flex justify-between text-xl font-montserrat font-bold mb-6">
-                    <span>Total:</span>
-                    <span id="checkout-total">₹0</span>
-                </div>
-                <button id="submit-order" class="whatsapp-btn w-full py-4 rounded-xl font-montserrat font-bold text-lg">
-                    <i class="fab fa-whatsapp mr-2"></i>Send Order via WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Detail View - Full Screen -->
-    <div id="product-detail-view" class="fixed inset-0 bg-darkBg z-50 hidden w-full h-screen overflow-y-auto">
-        <div class="w-full max-w-4xl mx-auto">
-            <!-- Header with back button -->
-            <div class="sticky top-0 z-50 bg-darkBg p-4 flex items-center justify-between border-b border-gray-800">
-                <button id="back-to-products" class="text-greyText hover:text-white text-xl">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                <h2 id="product-detail-title" class="text-xl font-oswald font-bold text-center flex-grow px-8"></h2>
-                <button id="close-product-detail" class="text-greyText hover:text-white text-xl">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <!-- Product Images Slider -->
-            <div class="relative">
-                <div id="product-image-container" class="w-full h-80 bg-gray-800 flex items-center justify-center">
-                    <img id="product-detail-image" src="" alt="" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    <div class="w-3 h-3 rounded-full bg-accentGold"></div>
-                    <div class="w-3 h-3 rounded-full bg-gray-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-gray-500"></div>
-                </div>
-            </div>
-            
-            <!-- Product Info -->
-            <div class="p-6">
-                <h2 id="product-detail-name" class="text-2xl font-oswald font-bold mb-2"></h2>
-                
-                <div id="product-detail-price" class="text-3xl font-montserrat font-extrabold gold-text mb-4"></div>
-                
-                <div class="mb-6">
-                    <p id="product-detail-description" class="text-greyText font-roboto text-lg leading-relaxed"></p>
-                </div>
-                
-                <!-- Specifications -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-oswald font-bold mb-4">Specifications</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="border border-gray-700 rounded-lg p-3">
-                            <p class="text-greyText text-sm">Category</p>
-                            <p id="product-detail-category" class="font-montserrat font-bold">-</p>
-                        </div>
-                        <div class="border border-gray-700 rounded-lg p-3">
-                            <p class="text-greyText text-sm">Brand</p>
-                            <p class="font-montserrat font-bold">Riddhi Nutrition</p>
-                        </div>
-                        <div class="border border-gray-700 rounded-lg p-3">
-                            <p class="text-greyText text-sm">Weight</p>
-                            <p class="font-montserrat font-bold">1kg</p>
-                        </div>
-                        <div class="border border-gray-700 rounded-lg p-3">
-                            <p class="text-greyText text-sm">Flavor</p>
-                            <p class="font-montserrat font-bold">Mixed</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Reviews Section -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-oswald font-bold mb-4">Customer Reviews</h3>
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-accentGold">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="ml-2 text-greyText">4.5 (128 reviews)</span>
-                    </div>
-                    <div class="border-b border-gray-700 pb-4 mb-4">
-                        <p class="font-montserrat font-bold mb-1">Great product, fast delivery!</p>
-                        <p class="text-greyText text-sm mb-2">By Verified Customer • 2 weeks ago</p>
-                        <p class="text-greyText">Excellent quality and quick delivery. Will order again.</p>
-                    </div>
-                    <div class="border-b border-gray-700 pb-4 mb-4">
-                        <p class="font-montserrat font-bold mb-1">Good value for money</p>
-                        <p class="text-greyText text-sm mb-2">By Fitness Enthusiast • 1 month ago</p>
-                        <p class="text-greyText">Good quality supplement. Noticed improvements in my workout performance.</p>
-                    </div>
-                </div>
-                
-                <!-- Action Buttons -->
-                <div class="mb-8">
-                    <div class="flex space-x-3">
-                        <button id="add-to-cart-detail" class="btn-primary py-3 px-6 rounded-xl font-montserrat font-bold flex-1 transition duration-300">
-                            <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
-                        </button>
-                        <button id="buy-now-detail" class="btn-secondary py-3 px-6 rounded-xl font-montserrat font-bold flex items-center justify-center transition duration-300">
-                            <i class="fab fa-whatsapp mr-2"></i> Buy Now
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Related Products -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-oswald font-bold mb-4">Related Products</h3>
-                    <div id="related-products" class="grid grid-cols-2 gap-4">
-                        <!-- Related products will be loaded here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript for product rendering -->
     <script>
-        // Shopping cart array and current products
+        // Shopping cart array
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let currentProducts = [];
-        let currentProductIndex = 0;
-        
+        let allProducts = [];
+
         // DOM elements
-        const cartIcon = document.getElementById('cart-icon');
-        const cartModal = document.getElementById('cart-modal');
-        const checkoutModal = document.getElementById('checkout-modal');
-        const productDetailModal = document.getElementById('product-detail-modal');
-        const productDetailView = document.getElementById('product-detail-view');
-        const closeCart = document.getElementById('close-cart');
-        const closeCheckout = document.getElementById('close-checkout');
-        const closeProductDetail = document.getElementById('close-product-detail');
-        const backToProducts = document.getElementById('back-to-products');
-        const cartItems = document.getElementById('cart-items');
+        const productGrid = document.getElementById('product-grid');
+        const categoryLinks = document.querySelectorAll('.category-link');
+        const cartBtn = document.getElementById('cart-btn');
         const cartCount = document.getElementById('cart-count');
-        const cartTotal = document.getElementById('cart-total');
-        const cartMrpTotal = document.getElementById('cart-mrp-total');
-        const cartSavings = document.getElementById('cart-savings');
-        const checkoutBtn = document.getElementById('checkout-btn');
-        const submitOrder = document.getElementById('submit-order');
-        const emptyCartMessage = document.getElementById('empty-cart-message');
-        const checkoutTotal = document.getElementById('checkout-total');
-        
-        // Product detail elements
-        const productDetailName = document.getElementById('product-detail-name');
-        const productDetailTitle = document.getElementById('product-detail-title');
-        const productDetailPrice = document.getElementById('product-detail-price');
-        const productDetailDescription = document.getElementById('product-detail-description');
-        const productDetailCategory = document.getElementById('product-detail-category');
-        const productDetailImage = document.getElementById('product-detail-image');
-        const addToCartDetail = document.getElementById('add-to-cart-detail');
-        const buyNowDetail = document.getElementById('buy-now-detail');
-        const relatedProductsContainer = document.getElementById('related-products');
-        const prevProduct = document.getElementById('prev-product');
-        const nextProduct = document.getElementById('next-product');
-        
-        // Initialize the application
-        function initApp() {
-            updateCartCount();
-            setupEventListeners();
-            loadProducts();
-            registerServiceWorker();
-            setupCategoryFilters();
-        }
-        
-        // Set up event listeners
-        function setupEventListeners() {
-            // Open cart modal
-            cartIcon.addEventListener('click', () => {
-                cartModal.classList.remove('hidden');
-                setTimeout(() => {
-                    cartModal.classList.remove('translate-x-full');
-                }, 10);
-                renderCart();
-            });
-            
-            // Close cart modal
-            closeCart.addEventListener('click', () => {
-                cartModal.classList.add('translate-x-full');
-                setTimeout(() => {
-                    cartModal.classList.add('hidden');
-                }, 300);
-            });
-            
-            // Close checkout modal
-            closeCheckout.addEventListener('click', () => {
-                checkoutModal.classList.add('hidden');
-            });
-            
-            // Close product detail modal
-            closeProductDetail.addEventListener('click', () => {
-                productDetailModal.classList.add('hidden');
-                productDetailView.classList.add('hidden');
-            });
-            
-            // Back to products from detail view
-            backToProducts.addEventListener('click', () => {
-                productDetailView.classList.add('hidden');
-            });
-            
-            // Close cart modal when clicking outside
-            cartModal.addEventListener('click', (e) => {
-                // Only close if clicking directly on the modal backdrop (not on child elements)
-                if (e.target === cartModal && !cartModal.classList.contains('translate-x-full')) {
-                    cartModal.classList.add('translate-x-full');
-                    setTimeout(() => {
-                        cartModal.classList.add('hidden');
-                    }, 300);
-                }
-            });
-            
-            checkoutModal.addEventListener('click', (e) => {
-                if (e.target === checkoutModal) {
-                    checkoutModal.classList.add('hidden');
-                }
-            });
-            
-            productDetailModal.addEventListener('click', (e) => {
-                if (e.target === productDetailModal) {
-                    productDetailModal.classList.add('hidden');
-                }
-            });
-            
-            // Mobile menu event listeners
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-                
-                // Close mobile menu when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
-                        mobileMenu.classList.add('hidden');
+
+        // Load products from JSON
+        async function loadProducts() {
+            try {
+                const response = await fetch('./data/products.json');
+                allProducts = await response.json();
+                renderProducts(allProducts);
+            } catch (error) {
+                console.error('Error loading products:', error);
+                // Fallback products
+                allProducts = [
+                    {
+                        id: 1,
+                        name: "Whey Protein 2kg",
+                        category: "Protein",
+                        price: 2499,
+                        mrp: 2999,
+                        offer: true,
+                        mostSelling: true,
+                        image: "https://i.ibb.co/Mx6LwRym/1.jpg"
+                    },
+                    {
+                        id: 2,
+                        name: "Multivitamin Complex",
+                        category: "Multivitamin",
+                        price: 2649,
+                        mrp: 6600,
+                        offer: false,
+                        mostSelling: false,
+                        image: "https://i.ibb.co/nMQKXMGq/2.jpg"
                     }
-                });
+                ];
+                renderProducts(allProducts);
             }
-            
-            // Proceed to checkout - show form
-            checkoutBtn.addEventListener('click', () => {
-                if (cart.length > 0) {
-                    cartModal.classList.add('translate-x-full');
-                    setTimeout(() => {
-                        cartModal.classList.add('hidden');
-                        checkoutModal.classList.remove('hidden');
-                        checkoutTotal.textContent = formatPrice(calculateTotal());
-                    }, 300);
-                }
-            });
-            
-            // Navigate to previous product
-            prevProduct.addEventListener('click', () => {
-                if (currentProducts.length > 0) {
-                    currentProductIndex = (currentProductIndex - 1 + currentProducts.length) % currentProducts.length;
-                    showProductDetail(currentProducts[currentProductIndex], currentProductIndex);
-                }
-            });
-            
-            // Navigate to next product
-            nextProduct.addEventListener('click', () => {
-                if (currentProducts.length > 0) {
-                    currentProductIndex = (currentProductIndex + 1) % currentProducts.length;
-                    showProductDetail(currentProducts[currentProductIndex], currentProductIndex);
-                }
-            });
-            
-            // Add to cart from product detail
-            addToCartDetail.addEventListener('click', () => {
-                if (currentProducts.length > 0) {
-                    const product = currentProducts[currentProductIndex];
-                    addToCart(product);
-                    showAlert(`${product.name} added to cart!`);
-                }
-            });
-            
-            // Buy now from product detail
-            buyNowDetail.addEventListener('click', () => {
-                if (currentProducts.length > 0) {
-                    const product = currentProducts[currentProductIndex];
-                    buyOnWhatsApp(product.name);
-                }
-            });
-            
-            // Submit order via WhatsApp
-            submitOrder.addEventListener('click', () => {
-                const name = document.getElementById('customer-name').value;
-                const mobile = document.getElementById('customer-mobile').value;
-                const address = document.getElementById('customer-address').value;
-                const notes = document.getElementById('order-notes').value;
-                
-                if (!name || !mobile || !address) {
-                    showAlert('Please fill in all required fields (Name, Mobile, Address)');
-                    return;
-                }
-                
-                if (cart.length > 0) {
-                    let message = `New Order from RIDHI Nutrition Store\n\n`;
-                    message += `Customer Details:\n`;
-                    message += `Name: ${name}\n`;
-                    message += `Mobile: ${mobile}\n`;
-                    message += `Address: ${address}\n`;
-                    if (notes) {
-                        message += `Notes: ${notes}\n`;
-                    }
-                    message += `\nOrder Items:\n`;
-                    
-                    cart.forEach(item => {
-                        message += `${item.name} - ${item.price} x ${item.quantity}\n`;
-                    });
-                    
-                    message += `\nTotal Amount: ${calculateTotal()}`;
-                    
-                    const phoneNumber = '919557412283';
-                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    window.open(whatsappUrl, '_blank');
-                    
-                    // Clear cart after order submission
-                    cart = [];
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    updateCartCount();
-                    checkoutModal.classList.add('hidden');
-                    showAlert('Your order details have been sent! Our team will contact you shortly.');
-                }
-            });
         }
-        
-        // Show product detail
-        function showProductDetail(product, index) {
-            currentProductIndex = index;
-            productDetailName.textContent = product.name;
-            productDetailTitle.textContent = product.name;
+
+        // Render products to grid
+        function renderProducts(products) {
+            productGrid.innerHTML = '';
             
-            // Format prices
-            const formattedPrice = `₹${product.price.toLocaleString('en-IN')}`;
-            const formattedMRP = `₹${product.mrp.toLocaleString('en-IN')}`;
-            
-            // Display price with MRP and savings information
-            if (product.offer) {
-                productDetailPrice.innerHTML = `${formattedPrice} <span class="line-through text-greyText text-2xl ml-2">${formattedMRP}</span><br><span class="text-green-500 font-montserrat font-bold mt-1">You save ₹${(product.mrp - product.price).toLocaleString('en-IN')}</span>`;
-            } else {
-                productDetailPrice.textContent = formattedPrice;
-            }
-            
-            // Add offer badge if applicable
-            if (product.offer) {
-                const offerBadge = document.createElement('span');
-                offerBadge.className = 'bg-accentRed text-white text-sm px-2 py-1 rounded ml-4';
-                offerBadge.textContent = 'OFFER';
-                productDetailPrice.appendChild(offerBadge);
-            }
-            
-            // Add most selling badge if applicable
-            if (product.mostSelling) {
-                const mostSellingBadge = document.createElement('span');
-                mostSellingBadge.className = 'bg-accentGold text-darkBg text-sm px-2 py-1 rounded ml-4';
-                mostSellingBadge.textContent = 'MOST SELLING';
-                productDetailPrice.appendChild(mostSellingBadge);
-            }
-            
-            // Set product category
-            productDetailCategory.textContent = product.category;
-            
-            // For now, we'll use a generic description since the new format doesn't include descriptions
-            productDetailDescription.textContent = `High-quality ${product.name} from RIDHI Nutrition Store. Get the best nutrition for your fitness journey.`;
-            
-            // Set product image
-            const imageUrl = getProductImagePlaceholder(product.image);
-            productDetailImage.src = imageUrl;
-            
-            // Show the product detail view
-            productDetailModal.classList.add('hidden');
-            productDetailView.classList.remove('hidden');
-            
-            // Load related products
-            loadRelatedProducts(product);
-        }
-        
-        // Load related products
-        function loadRelatedProducts(currentProduct) {
-            // Clear existing related products
-            relatedProductsContainer.innerHTML = '';
-            
-            // Get related products based on category (excluding current product)
-            const relatedProducts = currentProducts.filter(product => 
-                product.category === currentProduct.category && 
-                product.id !== currentProduct.id
-            ).slice(0, 4); // Limit to 4 related products
-            
-            if (relatedProducts.length === 0) {
-                // If no products in same category, get other products
-                relatedProducts.push(...currentProducts.filter(product => 
-                    product.id !== currentProduct.id
-                ).slice(0, 4));
-            }
-            
-            // Render related products
-            relatedProducts.forEach(product => {
+            products.forEach(product => {
                 const productCard = document.createElement('div');
-                productCard.className = 'product-card rounded-2xl overflow-hidden transition-all duration-300 border border-gray-800 cursor-pointer';
+                productCard.className = 'card';
                 
-                const imageUrl = getProductImagePlaceholder(product.image);
-                const formattedPrice = `₹${product.price.toLocaleString('en-IN')}`;
+                const imageUrl = product.image || 'https://via.placeholder.com/300x300';
                 
                 productCard.innerHTML = `
-                    <div class="product-image-container">
-                        <img src="${imageUrl}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">
+                    <img src="${imageUrl}" alt="${product.name}" class="product-image">
+                    <h3>${product.name}</h3>
+                    <div class="price">₹${product.price.toLocaleString('en-IN')} 
+                        ${product.offer ? `<span class="mrp">₹${product.mrp.toLocaleString('en-IN')}</span>` : ''}
                     </div>
-                    <div class="p-3">
-                        <h3 class="text-lg font-oswald font-bold mb-1 truncate">${product.name}</h3>
-                        <div class="flex justify-between items-center">
-                            <p class="text-lg font-montserrat font-bold gold-text">${formattedPrice}</p>
-                            ${product.offer ? `<span class="bg-accentRed text-white text-xs px-2 py-1 rounded">OFFER</span>` : ''}
-                        </div>
-                    </div>
+                    ${product.offer ? `<div class="savings">You save ₹${(product.mrp - product.price).toLocaleString('en-IN')}</div>` : ''}
+                    <button class="btn add-to-cart" data-id="${product.id}">Add to Cart</button>
+                    <button class="btn btn-whatsapp buy-now" data-name="${product.name}">Buy Now</button>
                 `;
                 
-                // Add click event to show product detail
-                productCard.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    showProductDetail(product, currentProducts.findIndex(p => p.id === product.id));
+                productGrid.appendChild(productCard);
+            });
+            
+            // Add event listeners to buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
+                    const product = allProducts.find(p => p.id === productId);
+                    addToCart(product);
+                    showAlert(`${product.name} added to cart!`);
                 });
-                
-                relatedProductsContainer.appendChild(productCard);
+            });
+            
+            document.querySelectorAll('.buy-now').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const productName = e.currentTarget.getAttribute('data-name');
+                    buyOnWhatsApp(productName);
+                });
             });
         }
-        
+
+        // Filter products by category
+        function filterProductsByCategory(category) {
+            let filteredProducts = [];
+            
+            if (category === 'All') {
+                filteredProducts = allProducts;
+            } else {
+                filteredProducts = allProducts.filter(product => product.category === category);
+            }
+            
+            renderProducts(filteredProducts);
+            
+            // Update active category link
+            categoryLinks.forEach(link => {
+                if (link.getAttribute('data-category') === category) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
         // Add to cart function
         function addToCart(product) {
-            // Check if product is already in cart
             const existingItem = cart.find(item => item.id === product.id);
             
             if (existingItem) {
@@ -1485,529 +343,235 @@
                 });
             }
             
-            // Save to localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartCount();
         }
-        
-        // Remove from cart function
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            // Save to localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-            renderCart();
-            updateCartCount();
-        }
-        
-        // Adjust quantity function
-        function adjustQuantity(productId, change) {
-            const item = cart.find(item => item.id === productId);
-            if (item) {
-                item.quantity += change;
-                // Remove item if quantity is 0 or less
-                if (item.quantity <= 0) {
-                    removeFromCart(productId);
-                } else {
-                    // Save to localStorage
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    renderCart();
-                    updateCartCount();
-                }
-            }
-        }
-        
+
         // Update cart count display
         function updateCartCount() {
             const count = cart.reduce((total, item) => total + item.quantity, 0);
             cartCount.textContent = count;
         }
-        
-        // Calculate total price
-        function calculateTotal() {
-            return cart.reduce((total, item) => {
-                return total + (item.price * item.quantity);
-            }, 0);
-        }
-        
-        // Calculate MRP total
-        function calculateMrpTotal() {
-            let total = 0;
-            cart.forEach(item => {
-                // Find the original product to get the MRP
-                const originalProduct = currentProducts.find(p => p.id === item.id);
-                if (originalProduct) {
-                    total += (originalProduct.mrp * item.quantity);
-                }
-            });
-            return total;
-        }
-        
-        // Calculate savings
-        function calculateSavings() {
-            return calculateMrpTotal() - calculateTotal();
-        }
-        
-        // Format price for display
-        function formatPrice(price) {
-            return `₹${price.toLocaleString('en-IN')}`;
-        }
-        
-        // Render cart items
-        function renderCart() {
-            if (cart.length === 0) {
-                cartItems.innerHTML = '<div class="text-center py-10 text-gray-500" id="empty-cart-message"><i class="fas fa-shopping-cart text-4xl mb-4"></i><p>Your cart is empty</p></div>';
-                cartTotal.textContent = formatPrice(0);
-                cartMrpTotal.textContent = formatPrice(0);
-                cartSavings.textContent = formatPrice(0);
-                return;
-            }
-            
-            emptyCartMessage.style.display = 'none';
-            cartItems.innerHTML = '';
-            
-            cart.forEach(item => {
-                const cartItem = document.createElement('div');
-                cartItem.className = 'flex items-center justify-between py-4 border-b border-gray-700';
-                
-                // Format price with ₹ symbol and commas
-                const formattedPrice = formatPrice(item.price);
-                
-                cartItem.innerHTML = `
-                    <div class="flex items-center">
-                        <div class="w-16 h-16 bg-gray-700 rounded-lg mr-4"></div>
-                        <div>
-                            <h3 class="font-montserrat font-bold">${item.name}</h3>
-                            <p class="text-accentGold font-montserrat font-bold">${formattedPrice}</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <button class="quantity-btn decrease-btn text-gray-400 hover:text-white w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center" data-id="${item.id}">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <span class="mx-3">${item.quantity}</span>
-                        <button class="quantity-btn increase-btn text-gray-400 hover:text-white w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center" data-id="${item.id}">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                        <button class="text-red-500 ml-4 remove-item" data-id="${item.id}">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                `;
-                
-                cartItems.appendChild(cartItem);
-            });
-            
-            // Add event listeners to remove buttons
-            document.querySelectorAll('.remove-item').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
-                    removeFromCart(productId);
-                });
-            });
-            
-            // Add event listeners to quantity buttons
-            document.querySelectorAll('.decrease-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
-                    adjustQuantity(productId, -1);
-                });
-            });
-            
-            document.querySelectorAll('.increase-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const productId = parseInt(e.currentTarget.getAttribute('data-id'));
-                    adjustQuantity(productId, 1);
-                });
-            });
-            
-            // Update cart totals
-            const total = calculateTotal();
-            const mrpTotal = calculateMrpTotal();
-            const savings = calculateSavings();
-            
-            cartTotal.textContent = formatPrice(total);
-            cartMrpTotal.textContent = formatPrice(mrpTotal);
-            cartSavings.textContent = formatPrice(savings);
-        }
-        
-        // Function to load product data from the consolidated JSON file
-        async function loadProducts() {
-            try {
-                const response = await fetch('./data/products.json');
-                const data = await response.json();
-                currentProducts = data;
-                renderProducts(data);
-                // Also render all products to the all-products grid on page load
-                renderProductsToGrid(data, 'all-products-grid');
-            } catch (error) {
-                console.error('Error loading product data:', error);
-                // Fallback to hardcoded data if JSON fails to load
-                const fallbackProducts = [
-                    {
-                        id: 1,
-                        name: "Whey Protein 1kg",
-                        category: "Protein",
-                        price: 2499,
-                        mrp: 4999,
-                        offer: true,
-                        mostSelling: true,
-                        image: "https://images.unsplash.com/photo-1588419101115-875a40b6bc8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                    },
-                    {
-                        id: 2,
-                        name: "Multivitamin Complex",
-                        category: "Vitamins",
-                        price: 1199,
-                        mrp: 1499,
-                        offer: false,
-                        mostSelling: false,
-                        image: "https://images.unsplash.com/photo-1597944330118-7a0e580f28b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                    }
-                ];
-                currentProducts = fallbackProducts;
-                renderProducts(fallbackProducts);
-                // Also render all products to the all-products grid on page load
-                renderProductsToGrid(fallbackProducts, 'all-products-grid');
-            }
-        }
 
-        // Function to generate product cards
-        function renderProducts(products) {
-            // Clear all category grids
-            const proteinGrid = document.getElementById('protein-grid');
-            const vitaminsGrid = document.getElementById('vitamins-grid');
-            
-            if (proteinGrid) proteinGrid.innerHTML = '';
-            if (vitaminsGrid) vitaminsGrid.innerHTML = '';
-            
-            products.forEach((product, index) => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card rounded-2xl overflow-hidden transition-all duration-500 border border-gray-800 cursor-pointer';
-                
-                // Add click event to the entire card
-                productCard.addEventListener('click', function(e) {
-                    // Prevent opening detail view when clicking on action buttons
-                    if (!e.target.closest('button')) {
-                        showProductDetail(product, index);
-                    }
-                });
-                
-                // Add hover event for visual feedback only
-                productCard.addEventListener('mouseenter', function() {
-                    // Visual feedback only, no scrolling behavior
-                });
-                
-                // Also add touch event for better mobile experience
-                productCard.addEventListener('touchstart', function(e) {
-                    // Visual feedback only, no scrolling behavior
-                });
-                
-                // Use product images
-                const imageUrl = getProductImagePlaceholder(product.image);
-                
-                // Format price with ₹ symbol and commas
-                const formattedPrice = `₹${product.price.toLocaleString('en-IN')}`;
-                const formattedMRP = `₹${product.mrp.toLocaleString('en-IN')}`;
-                
-                productCard.innerHTML = `
-                    <div class="product-image-container">
-                        <img src="${imageUrl}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-oswald font-bold mb-3">${product.name}</h3>
-                        <div class="mb-4">
-                            <p class="text-3xl font-montserrat font-extrabold gold-text inline">${formattedPrice}</p>
-                            ${product.offer ? `<span class="line-through text-greyText ml-2">${formattedMRP}</span>` : ''}
-                        </div>
-                        ${product.offer ? `<div class="mb-2 text-green-500 font-montserrat font-bold">You save ₹${(product.mrp - product.price).toLocaleString('en-IN')}</div>` : ''}
-                        <div class="mb-4">
-                            ${product.offer ? `<span class="bg-accentRed text-white text-xs px-2 py-1 rounded mr-2">OFFER</span>` : ''}
-                            ${product.mostSelling ? `<span class="bg-accentGold text-darkBg text-xs px-2 py-1 rounded">MOST SELLING</span>` : ''}
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="btn-primary py-3 px-4 rounded-xl font-montserrat font-bold flex-1 transition duration-300 add-to-cart-btn" data-product='${JSON.stringify(product)}'>
-                                <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
-                            </button>
-                            <button class="btn-secondary py-3 px-4 rounded-xl font-montserrat font-bold flex items-center justify-center transition duration-300 buy-now-btn" data-name="${product.name}">
-                                <i class="fab fa-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-                `;
-                
-                // Append to the appropriate category grid
-                if (product.category === 'Protein') {
-                    if (proteinGrid) proteinGrid.appendChild(productCard);
-                } else if (product.category === 'Vitamins') {
-                    if (vitaminsGrid) vitaminsGrid.appendChild(productCard);
-                }
-            });
-            
-            // Add event listeners to buttons
-            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const product = JSON.parse(e.currentTarget.getAttribute('data-product'));
-                    addToCart(product);
-                    showAlert(`${product.name} added to cart!`);
-                });
-            });
-            
-            document.querySelectorAll('.buy-now-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const productName = e.currentTarget.getAttribute('data-name');
-                    buyOnWhatsApp(productName);
-                });
-            });
-        }
-
-        // Helper function to get product images
-        function getProductImagePlaceholder(imageName) {
-            // Check if the image is already a URL
-            if (imageName && (imageName.startsWith('http://') || 
-                             imageName.startsWith('https://') || 
-                             imageName.startsWith('//'))) {
-                return imageName;
-            }
-            // Ensure the image path is correctly formed for local files
-            if (imageName && imageName.startsWith('images/')) {
-                return `./${imageName}`;
-            } else if (imageName) {
-                return `./images/${imageName}`;
-            } else {
-                // Return a default image if no image is provided
-                return './images/default.jpg';
-            }
-        }
-
-        // Function to handle WhatsApp purchase
+        // Buy on WhatsApp
         function buyOnWhatsApp(productName) {
             const phoneNumber = '919557412283';
             const message = `Hello, I am interested in buying ${productName}.`;
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         }
-        
-        // Custom alert function
+
+        // Show alert
         function showAlert(message) {
-            // Remove existing alerts
-            const existingAlert = document.querySelector('.custom-alert');
-            if (existingAlert) {
-                existingAlert.remove();
-            }
-            
-            // Create alert element
             const alert = document.createElement('div');
-            alert.className = 'custom-alert fixed top-4 right-4 bg-accentRed text-white px-6 py-3 rounded-lg shadow-lg z-50';
             alert.textContent = message;
+            alert.style.cssText = `
+                position: fixed;
+                top: 70px;
+                right: 20px;
+                background: #3498db;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 4px;
+                z-index: 1000;
+                font-size: 0.9rem;
+            `;
             document.body.appendChild(alert);
             
-            // Auto remove after 3 seconds
             setTimeout(() => {
-                alert.style.opacity = '0';
-                setTimeout(() => {
-                    alert.remove();
-                }, 300);
+                alert.remove();
             }, 3000);
         }
         
-        // Register service worker for PWA
-        function registerServiceWorker() {
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js')
-                        .then(registration => {
-                            console.log('SW registered: ', registration);
-                        })
-                        .catch(registrationError => {
-                            console.log('SW registration failed: ', registrationError);
-                        });
-                });
-            }
-        }
-        
-        // Set up category filters
-        function setupCategoryFilters() {
-            // Set up category dropdown
-            const dropdownBtn = document.getElementById('category-dropdown-btn');
-            const dropdown = document.getElementById('category-dropdown');
-            const categoryLinks = document.querySelectorAll('.category-link');
-            
-            if (dropdownBtn && dropdown) {
-                // Toggle dropdown on button click
-                dropdownBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    dropdown.classList.toggle('hidden');
-                });
-                
-                // Close dropdown when clicking elsewhere
-                document.addEventListener('click', (e) => {
-                    if (!dropdown.contains(e.target) && e.target !== dropdownBtn) {
-                        dropdown.classList.add('hidden');
-                    }
-                });
-                
-                // Handle category link clicks
-                categoryLinks.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const category = link.getAttribute('data-category'); // Get category from data-category attribute
-                        filterProductsByCategory(category);
-                        dropdown.classList.add('hidden');
-                        
-                        // Scroll to all-products section
-                        document.getElementById('all-products').scrollIntoView({ behavior: 'smooth' });
-                    });
-                });
+        // Show cart modal
+        function showCart() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
             }
             
-            // Set up mobile category links
-            const mobileCategoryLinks = document.querySelectorAll('.mobile-category-link');
+            // Create cart modal
+            const modal = document.createElement('div');
+            modal.className = 'cart-modal';
+            modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1001; display: flex; justify-content: center; align-items: center;';
             
-            mobileCategoryLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const category = link.getAttribute('data-category'); // Get category from data-category attribute
-                    filterProductsByCategory(category);
-                    
-                    // Close mobile menu
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (mobileMenu) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                    
-                    // Scroll to all-products section
-                    document.getElementById('all-products').scrollIntoView({ behavior: 'smooth' });
-                });
+            let modalContent = '<div style="background: white; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px; max-height: 80vh; overflow-y: auto; position: relative;">' +
+                '<h2 style="margin-top: 0; color: #2c3e50;">Your Cart</h2>' +
+                '<div class="cart-items">';
+            
+            cart.forEach(item => {
+                modalContent += '<div class="cart-item" style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee;" data-id="' + item.id + '">' +
+                    '<div>' +
+                        '<h4>' + item.name + '</h4>' +
+                        '<p>₹' + item.price.toLocaleString('en-IN') + ' x </p>' +
+                    '</div>' +
+                    '<div style="display: flex; align-items: center; gap: 10px;">' +
+                        '<button class="quantity-btn" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #f8f9fa; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="updateQuantity(' + item.id + ', -1)">-</button>' +
+                        '<span class="quantity" style="margin: 0 5px;">' + item.quantity + '</span>' +
+                        '<button class="quantity-btn" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #f8f9fa; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="updateQuantity(' + item.id + ', 1)">+</button>' +
+                        '<p style="margin: 0 10px 0 15px;">₹' + (item.price * item.quantity).toLocaleString('en-IN') + '</p>' +
+                    '</div>' +
+                '</div>';
             });
             
-            // Set up sticky category bar
-            const categoryItems = document.querySelectorAll('.category-item');
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             
-            categoryItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    // Remove active class from all items
-                    categoryItems.forEach(i => i.classList.remove('active'));
-                    
-                    // Add active class to clicked item
-                    item.classList.add('active');
-                    
-                    const category = item.getAttribute('data-category'); // Get category from data-category attribute
-                    filterProductsByCategory(category);
-                });
+            modalContent += '</div>' +
+                '<div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid #eee; font-weight: bold;">' +
+                    '<h3>Total: ₹' + total.toLocaleString('en-IN') + '</h3>' +
+                '</div>' +
+                '<div style="margin-top: 20px; text-align: center;">' +
+                    '<button id="order-now-btn" class="btn" style="margin-right: 10px;">Order Now</button>' +
+                    '<button id="close-cart-btn" style="background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Close</button>' +
+                '</div>' +
+            '</div>';
+            
+            modal.innerHTML = modalContent;
+            document.body.appendChild(modal);
+            
+            // Add event listeners to the modal buttons
+            document.getElementById('order-now-btn').addEventListener('click', showOrderForm);
+            document.getElementById('close-cart-btn').addEventListener('click', () => {
+                document.querySelector('.cart-modal').remove();
             });
         }
         
-        // Filter products by category - now scrolls to the appropriate section
-        function filterProductsByCategory(category) {
-            let filteredProducts = [];
+        // Update quantity function
+        function updateQuantity(productId, change) {
+            const itemIndex = cart.findIndex(item => item.id === productId);
             
-            if (category === 'All') {
-                filteredProducts = currentProducts;
-            } else {
-                filteredProducts = currentProducts.filter(product => product.category === category);
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity += change;
+                
+                // Remove item if quantity becomes 0
+                if (cart[itemIndex].quantity <= 0) {
+                    cart.splice(itemIndex, 1);
+                }
+                
+                // Update cart in localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                
+                // Update cart count display
+                updateCartCount();
+                
+                // Refresh the cart modal
+                document.querySelector('.cart-modal').remove();
+                showCart();
             }
-            
-            // Render filtered products to the all-products-grid section
-            renderProductsToGrid(filteredProducts, 'all-products-grid');
-            
-            // Scroll to the all-products section
-            setTimeout(() => {
-                document.getElementById('all-products').scrollIntoView({ behavior: 'smooth' });
-            }, 100);
         }
         
-        // Function to render products to a specific grid
-        function renderProductsToGrid(products, gridId) {
-            const grid = document.getElementById(gridId);
-            if (!grid) return;
+        // Show order form
+        function showOrderForm() {
+            // Remove the cart modal
+            document.querySelector('.cart-modal').remove();
             
-            grid.innerHTML = '';
+            // Create order form modal
+            const orderModal = document.createElement('div');
+            orderModal.className = 'order-modal';
+            orderModal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1001; display: flex; justify-content: center; align-items: center;';
             
-            products.forEach((product, index) => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card rounded-2xl overflow-hidden transition-all duration-500 border border-gray-800 cursor-pointer';
+            const orderFormContent = '<div style="background: white; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px;">' +
+                    '<h2 style="margin-top: 0; color: #2c3e50;">Order Details</h2>' +
+                    '<form id="order-form">' +
+                        '<div style="margin-bottom: 15px;">' +
+                            '<label style="display: block; margin-bottom: 5px;">Full Name *</label>' +
+                            '<input type="text" id="customer-name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">' +
+                        '</div>' +
+                        '<div style="margin-bottom: 15px;">' +
+                            '<label style="display: block; margin-bottom: 5px;">Mobile Number *</label>' +
+                            '<input type="tel" id="customer-phone" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">' +
+                        '</div>' +
+                        '<div style="margin-bottom: 15px;">' +
+                            '<label style="display: block; margin-bottom: 5px;">Delivery Address *</label>' +
+                            '<textarea id="customer-address" required rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>' +
+                        '</div>' +
+                        '<div style="margin-top: 20px; text-align: center;">' +
+                            '<button type="submit" class="btn">Place Order on WhatsApp</button>' +
+                            '<button type="button" id="cancel-order-btn" style="background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-left: 10px;">Cancel</button>' +
+                        '</div>' +
+                    '</form>' +
+                '</div>';
+            
+            orderModal.innerHTML = orderFormContent;
+document.body.appendChild(orderModal);
+
+// Add event listeners to the form
+document.getElementById('order-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Values lena
+    const name = document.getElementById('customer-name').value;
+    const phone = document.getElementById('customer-phone').value;
+    const address = document.getElementById('customer-address').value;
+    const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Message create karna (Template Literals ka use karke)
+    let orderMessage = `*New Order Request* 📦\n\n`;
+    orderMessage += `👤 *Name:* ${name}\n`;
+    orderMessage += `📞 *Mobile:* ${phone}\n`;
+    orderMessage += `📍 *Address:* ${address}\n\n`;
+    
+    orderMessage += `*Order Details:*\n------------------\n`;
+    
+    let total = 0;
+    
+    // Items add karna (Short aur Clear format)
+    currentCart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        
+        // Product Line: Name (xQuantity) = Total
+        orderMessage += `🔹 ${item.name} (x${item.quantity})\n`;
+        orderMessage += `   Price: ₹${itemTotal.toLocaleString('en-IN')}\n`;
+    });
+    
+    orderMessage += `------------------\n`;
+    orderMessage += `💰 *Grand Total: ₹${total.toLocaleString('en-IN')}*\n`;
+    
+    // WhatsApp open karna
+    // encodeURIComponent jaruri hai taaki spaces aur new lines sahi se kaam kare
+    const whatsappUrl = `https://wa.me/919557412283?text=${encodeURIComponent(orderMessage)}`;
+    window.open(whatsappUrl, '_blank');
+
+                // Clear cart after order
+                cart = [];
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
                 
-                // Add click event to the entire card
-                productCard.addEventListener('click', function(e) {
-                    // Prevent opening detail view when clicking on action buttons
-                    if (!e.target.closest('button')) {
-                        showProductDetail(product, index);
-                    }
-                });
-                
-                // Add hover event for visual feedback only
-                productCard.addEventListener('mouseenter', function() {
-                    // Visual feedback only, no scrolling behavior
-                });
-                
-                // Also add touch event for better mobile experience
-                productCard.addEventListener('touchstart', function(e) {
-                    // Visual feedback only, no scrolling behavior
-                });
-                
-                // Use product images
-                const imageUrl = getProductImagePlaceholder(product.image);
-                
-                // Format price with ₹ symbol and commas
-                const formattedPrice = `₹${product.price.toLocaleString('en-IN')}`;
-                const formattedMRP = `₹${product.mrp.toLocaleString('en-IN')}`;
-                
-                productCard.innerHTML = `
-                    <div class="product-image-container">
-                        <img src="${imageUrl}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-oswald font-bold mb-3">${product.name}</h3>
-                        <div class="mb-4">
-                            <p class="text-3xl font-montserrat font-extrabold gold-text inline">${formattedPrice}</p>
-                            ${product.offer ? `<span class="line-through text-greyText ml-2">${formattedMRP}</span>` : ''}
-                        </div>
-                        ${product.offer ? `<div class="mb-2 text-green-500 font-montserrat font-bold">You save ₹${(product.mrp - product.price).toLocaleString('en-IN')}</div>` : ''}
-                        <div class="mb-4">
-                            ${product.offer ? `<span class="bg-accentRed text-white text-xs px-2 py-1 rounded mr-2">OFFER</span>` : ''}
-                            ${product.mostSelling ? `<span class="bg-accentGold text-darkBg text-xs px-2 py-1 rounded">MOST SELLING</span>` : ''}
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="btn-primary py-3 px-4 rounded-xl font-montserrat font-bold flex-1 transition duration-300 add-to-cart-btn" data-product='${JSON.stringify(product).replace(/'/g, "&quot;")}'>
-                                <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
-                            </button>
-                            <button class="btn-secondary py-3 px-4 rounded-xl font-montserrat font-bold flex items-center justify-center transition duration-300 buy-now-btn" data-name="${product.name}">
-                                <i class="fab fa-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-                `;
-                
-                grid.appendChild(productCard);
+                // Close the modal
+                document.querySelector('.order-modal').remove();
             });
             
-            // Add event listeners to buttons
-            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const product = JSON.parse(e.currentTarget.getAttribute('data-product'));
-                    addToCart(product);
-                    showAlert(`${product.name} added to cart!`);
-                });
-            });
-            
-            document.querySelectorAll('.buy-now-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const productName = e.currentTarget.getAttribute('data-name');
-                    buyOnWhatsApp(productName);
-                });
+            document.getElementById('cancel-order-btn').addEventListener('click', () => {
+                document.querySelector('.order-modal').remove();
             });
         }
 
-        // Load products when page loads
+        // Event listeners
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const category = link.getAttribute('data-category');
+                filterProductsByCategory(category);
+            });
+        });
+
+        cartBtn.addEventListener('click', showCart);
+
+        // Initialize the app
         document.addEventListener('DOMContentLoaded', () => {
-            initApp();
+            loadProducts();
+            updateCartCount();
+            
+            // Ensure 'All Products' category is selected by default and show all products
+            setTimeout(() => {
+                const allProductsLink = document.querySelector('.category-link[data-category="All"]');
+                if (allProductsLink) {
+                    allProductsLink.classList.add('active');
+                    // Trigger the 'All Products' filter to show all products on load
+                    filterProductsByCategory('All');
+                }
+            }, 100);
         });
     </script>
 </body>
