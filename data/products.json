@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Q6 nass gener",
-    "category": "mass gener",
+    "name": "Q6 mass gainer",
+    "category": "mass gainer",
     "price": 2649,
     "mrp": 6600,
     "offer": true,
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "name": "Muscle pro mass gainer 2.7 kg ",
-    "category": "mass gener",
+    "category": "mass gainer",
     "price": 1999,
     "mrp": 3900,
     "offer": true,
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "name": "Muscle pro mass gainer 5 kg ",
-    "category": "mass gener",
+    "category": "mass gainer",
     "price": 3499,
     "mrp": 6300,
     "offer": true,
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "name": "Q6 mass Gainer 5 kg",
-    "category": "mass gener",
+    "category": "mass gainer",
     "price": 3999,
     "mrp": 7100,
     "offer": true,
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "name": "Q6 MASS GEINER 3 KG",
-    "category": "mass gener",
+    "category": "mass gainer",
     "price": 2599,
     "mrp": 4200,
     "offer": true,
@@ -152,7 +152,7 @@
   {
     "id": 16,
     "name": "GNC PRO WEIGHT GAINER 2.5 KG",
-    "category": "mass gener",
+    "category": "mass gainer",
     "price": 1999,
     "mrp": 2670,
     "offer": true,
