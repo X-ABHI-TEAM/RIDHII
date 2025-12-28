@@ -315,7 +315,7 @@
             if (category === 'All') {
                 filteredProducts = allProducts;
             } else {
-                filteredProducts = allProducts.filter(product => product.category === category);
+                filteredProducts = allProducts.filter(product => product.category.toLowerCase() === category.toLowerCase());
             }
             
             renderProducts(filteredProducts);
@@ -409,6 +409,7 @@
                         '<button class="quantity-btn" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #f8f9fa; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="updateQuantity(' + item.id + ', -1)">-</button>' +
                         '<span class="quantity" style="margin: 0 5px;">' + item.quantity + '</span>' +
                         '<button class="quantity-btn" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #ddd; background: #f8f9fa; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="updateQuantity(' + item.id + ', 1)">+</button>' +
+                        '<button class="remove-btn" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid #e74c3c; background: #e74c3c; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-left: 10px;" onclick="removeFromCart(' + item.id + ')">X</button>' +
                         '<p style="margin: 0 10px 0 15px;">₹' + (item.price * item.quantity).toLocaleString('en-IN') + '</p>' +
                     '</div>' +
                 '</div>';
@@ -447,6 +448,26 @@
                 if (cart[itemIndex].quantity <= 0) {
                     cart.splice(itemIndex, 1);
                 }
+                
+                // Update cart in localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                
+                // Update cart count display
+                updateCartCount();
+                
+                // Refresh the cart modal
+                document.querySelector('.cart-modal').remove();
+                showCart();
+            }
+        }
+        
+        // Remove item from cart function
+        function removeFromCart(productId) {
+            const itemIndex = cart.findIndex(item => item.id === productId);
+            
+            if (itemIndex !== -1) {
+                // Remove item from cart
+                cart.splice(itemIndex, 1);
                 
                 // Update cart in localStorage
                 localStorage.setItem('cart', JSON.stringify(cart));
