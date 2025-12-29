@@ -11,17 +11,17 @@
   },
   {
     "id": 2,
-    "name": "Multivitamin Complex",
-    "category": "Multivitamin",
-    "price": 2999,
-    "mrp": 7500,
+    "name": "Q6 Gold whey ",
+    "category": "protein",
+    "price": 2649,
+    "mrp": 6600,
     "offer": false,
     "mostSelling": false,
     "image": "https://i.ibb.co/nMQKXMGq/2.jpg"
   },
   {
     "id": 3,
-    "name": "Core fuel 2 kg",
+    "name": "Core fuel whey 2 kg",
     "category": "Protein",
     "price": 2999,
     "mrp": 7500,
@@ -173,7 +173,7 @@
     "id": 18,
     "name": "AMERICANZ MUSCLES 2 KG ",
     "category": "PROTEIN",
-    "price": 7777,
+    "price": 7499,
     "mrp": 8999,
     "offer": true,
     "mostSelling": true,
@@ -220,7 +220,7 @@
     "image": "https://i.ibb.co/B2JTYQMn/22.jpg"
   },
   {
-    "id": 23000,
+    "id": 23,
     "name": "Q6 CREATINE 4X",
     "category": "Creatine",
     "price": 999,
@@ -243,8 +243,8 @@
     "id": 25,
     "name": "BIOZYME PERFORMANCE WHEY 1 KG",
     "category": "PROTEIN",
-    "price": 1799,
-    "mrp": 249900,
+    "price": 4499,
+    "mrp": 5650,
     "offer": true,
     "mostSelling": true,
     "image": "https://i.ibb.co/yBdrnzPX/25.jpg"
@@ -253,8 +253,8 @@
     "id": 26,
     "name": "NITRO TECH WHEY PROTEIN 2 KG ",
     "category": "PROTEIN",
-    "price": 1799,
-    "mrp": 249900,
+    "price": 4499,
+    "mrp": 7799,
     "offer": true,
     "mostSelling": true,
     "image": "https://i.ibb.co/FqXZkRDQ/26.jpg"
